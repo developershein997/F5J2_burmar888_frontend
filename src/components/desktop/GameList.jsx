@@ -81,6 +81,8 @@ export function GameList({loading, games}) {
         });
   };
 
+  // console.log(displayGames);
+
   const handleLaunchGame = async (game) => {
     setLaunchingGameId(game.id);
     setLaunchError("");
@@ -214,6 +216,8 @@ export function GameList({loading, games}) {
   `}</style>
     </>);
 
+    
+
   
 
 
@@ -282,6 +286,7 @@ export function GameList({loading, games}) {
                   alt={item.game_name}
                   className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-200"
                 />
+                
                 <button
                   className="absolute bottom-2 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 text-white font-bold text-xs shadow hover:scale-105 transition whitespace-nowrap border border-yellow-300"
                   onClick={e => { e.stopPropagation(); handleLaunchGame(item); }}

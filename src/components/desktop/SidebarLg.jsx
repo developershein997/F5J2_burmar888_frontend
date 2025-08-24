@@ -151,7 +151,7 @@ const SidebarLg = ({ show, onClose }) => {
                 contacts.map((contact, index) => (
                     <Link to="/contact" key={index} onClick={onClose}>
                       <img
-                          src={`https://moonstar543.pro/api/..${contact.image}`}
+                          src={`https://burmar888.online/api/..${contact.image}`}
 
                           className="rounded-lg w-12 h-12"
                           alt={contact.name}

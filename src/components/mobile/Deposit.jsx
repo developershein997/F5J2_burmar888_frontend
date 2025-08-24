@@ -72,7 +72,7 @@ const Deposit = () => {
                   <div className="flex items-center">
                     <img
                         className="rounded-lg shadow w-12 h-12 object-cover"
-                        src={"https://moonstar543.pro" + selectedBank.img}
+                        src={"https://burmar888.online" + selectedBank.img}
                         alt={selectedBank.payment_type}
                     />
                     <div className="ml-3">
@@ -151,7 +151,7 @@ const Deposit = () => {
                           }}
                           className="flex gap-2 bg-gray-100 hover:bg-yellow-100 cursor-pointer p-2 rounded-lg text-black items-center"
                       >
-                        <img src={"https://moonstar543.pro" + bank.img} className="w-10 h-10 rounded-md object-cover" alt="bank" />
+                        <img src={"https://burmar888.online" + bank.img} className="w-10 h-10 rounded-md object-cover" alt="bank" />
                         <div>
                           <p className="text-xs">{content?.wallet?.account_name} : {bank.name}</p>
                           <p className="text-xs">{content?.wallet?.account} : {bank.no}</p>

@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+F5J2_moonstar_build
+F5J2_burmar888_build
 
 # Editor directories and files
 .vscode/*
