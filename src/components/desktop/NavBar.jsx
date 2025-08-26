@@ -131,13 +131,13 @@ function NavBar() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-2 sm:px-6 py-2 gap-2">
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer flex-shrink-0" onClick={() => navigate('/')}> 
-            <img src={logo} alt="Logo" className="h-9 md:h-10 w-auto object-contain" />
+            <img src={"/images/Burmar888.jpg"} alt="Logo" className="h-9 md:h-10 w-auto object-contain" />
           </div>
 
           {/* Balances & Exchange - Always Centered */}
           {user && (
             <div className="flex items-center gap-2 bg-[#23243a] rounded-xl px-3 md:px-4 py-1 md:py-2 shadow-inner flex-1 justify-center mx-2 min-w-0 overflow-x-auto">
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                 <FaMoneyBillWave className="text-yellow-400 mr-1" />
                 <span className="text-xs text-gray-400 font-semibold">M:</span>
                 <span className="text-lg md:text-xl text-white font-extrabold">{user?.main_balance}</span>
@@ -148,7 +148,7 @@ function NavBar() {
                 aria-label="Exchange between balances"
               >
                 <FaExchangeAlt />
-              </button>
+              </button> */}
               <div className="flex items-center gap-1">
                 <FaGamepad className="text-yellow-400 mr-1" />
                 <span className="text-xs text-gray-400 font-semibold">G:</span>

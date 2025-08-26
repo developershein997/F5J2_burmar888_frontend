@@ -16,7 +16,7 @@ const Transfer = () => {
         {name:'YB',value:'0.00'},
      ]
   return (
-    <div>
+     <div>
       <div className="profileForm px-3 py-4 rounded-4 mx-auto">
         <div className="row gap-1   ">
             {data.map((item,index)=>{
