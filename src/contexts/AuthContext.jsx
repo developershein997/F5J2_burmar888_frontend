@@ -45,7 +45,7 @@ const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         if (token && token !== "null" && token !== "undefined") {
             const interval = setInterval(() => {
-                fetch('https://moonstar543.pro/api/user', {
+                fetch('https://burmar888.online/api/user', {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/json',
