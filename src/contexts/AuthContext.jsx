@@ -14,7 +14,7 @@ const AuthContextProvider = ({ children }) => {
         const savedToken = localStorage.getItem("token");
         // Only return the token if it's not null, undefined, or empty string
         const validToken = savedToken && savedToken !== "null" && savedToken !== "undefined" ? savedToken : null;
-        console.log("AuthContext: Initializing token from localStorage:", { savedToken, validToken });
+        // console.log("AuthContext: Initializing token from localStorage:", { savedToken, validToken });
         return validToken;
     });
     const [profile, setProfile] = useState(() => {
@@ -24,21 +24,21 @@ const AuthContextProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const logout = () => {
-        console.log("AuthContext: Logging out, clearing token and profile");
+        // console.log("AuthContext: Logging out, clearing token and profile");
         setToken(null);
         setProfile(null);
         navigate('/?type=all');
     }
 
     useEffect(() => {
-        console.log("AuthContext: Token changed:", token);
+        // console.log("AuthContext: Token changed:", token);
         if (token && token !== "null" && token !== "undefined") {
             localStorage.setItem("token", token);
-            console.log("AuthContext: Token saved to localStorage:", token);
+            // console.log("AuthContext: Token saved to localStorage:", token);
         } else {
             localStorage.removeItem("token");
             localStorage.removeItem("userProfile");
-            console.log("AuthContext: Token and profile removed from localStorage");
+            // console.log("AuthContext: Token and profile removed from localStorage");
         }
     }, [token]);
 
@@ -79,7 +79,7 @@ const AuthContextProvider = ({ children }) => {
                 })
                 .catch(error => {
                     if (error !== 'Unauthorized') {
-                        console.error("Error fetching real-time balance:", error);
+                        // console.error("Error fetching real-time balance:", error);
                     }
                 });
             }, 5000); // Fetch every 5 seconds
@@ -89,7 +89,7 @@ const AuthContextProvider = ({ children }) => {
     }, [token]);
 
     const updateProfile = (newProfile) => {
-        console.log("AuthContext: Updating profile:", newProfile);
+        // console.log("AuthContext: Updating profile:", newProfile);
         setProfile(newProfile);
         if (newProfile) {
             localStorage.setItem("userProfile", JSON.stringify(newProfile));

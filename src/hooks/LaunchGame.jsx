@@ -37,7 +37,7 @@ const launchGame = (type_id, provider_id, game_id) => async (e) => {
     // window.open(data.Url, "_blank");
     // console.log("Launch Game success");
   } catch (error) {
-    console.error("Launch Game error:", error);
+    // console.error("Launch Game error:", error);
   }
 };
 

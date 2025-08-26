@@ -12,18 +12,18 @@ const useLogin = () => {
     const navigate = useNavigate();
 
     const login = async (url, inputData) => {
-        console.log("useLogin: Starting login process for:", url);
+        // console.log("useLogin: Starting login process for:", url);
         setLoading(true);
         try {
             const res = await axios.post(url, inputData);
-            console.log("useLogin: Login response:", res.data);
+            // console.log("useLogin: Login response:", res.data);
             if (res.status === 200) {
                 setError(null);
                 setErrMsg(null);
                 setLoading(false);
                 const { token, user } = res.data.data;
-                console.log("useLogin: Setting token:", token);
-                console.log("useLogin: Setting user profile:", user);
+                // console.log("useLogin: Setting token:", token);
+                // console.log("useLogin: Setting user profile:", user);
                 setToken(token); // Use context setToken instead of localStorage
                 updateProfile(user);
                 navigate('/?type=all');
@@ -32,7 +32,7 @@ const useLogin = () => {
                 return user;
             }
         } catch (e) {
-            console.error("useLogin: Login error:", e);
+            // console.error("useLogin: Login error:", e);
             setLoading(false);
             if (e.response && e.response.data) {
                 setError(e.response.data.errors);

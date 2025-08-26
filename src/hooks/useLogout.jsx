@@ -26,10 +26,10 @@ const useLogout = () => {
                 contextLogout();
                 message.success('Logout successfully.');
             } else {
-                console.error("Logout failed:", response.statusText);
+                // console.error("Logout failed:", response.statusText);
             }
         } catch (error) {
-            console.error("Error during logout:", error);
+            // console.error("Error during logout:", error);
         }
     }
 
