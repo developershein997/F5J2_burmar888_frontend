@@ -108,7 +108,7 @@ const Promotion = () => {
                   {/* Image */}
                   <div className="relative mb-6 overflow-hidden rounded-2xl">
                     <img 
-                      src={"https://moonstar543.pro/api/.."+item.img_url} 
+                      src={"https://burmar888.online/api/.."+item.img_url} 
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" 
                       alt={item.title}
                     />
@@ -198,7 +198,7 @@ const Promotion = () => {
             </div>
             
             <img 
-              src={"https://moonstar543.pro/api/.."+selectedPromotion.img_url} 
+              src={"https://burmar888.online/api/.."+selectedPromotion.img_url} 
               className="w-full h-64 object-cover rounded-2xl mb-6" 
               alt={selectedPromotion.title}
             />
@@ -207,14 +207,14 @@ const Promotion = () => {
               {selectedPromotion.description}
             </p>
             
-            <div className="flex gap-4">
+            <div className="flex justify-center">
               <button 
                 onClick={() => setSelectedPromotion(null)}
                 className="flex-1 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
               >
                 Close
               </button>
-              <button className="flex-1 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300">
+              {/* <button className="flex-1 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300">
                 Claim Offer
               </button> */}
                 </div>
