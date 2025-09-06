@@ -77,6 +77,8 @@ const GameTabsLg = () => {
   // Use the first game type's image as a fallback for All Games/Hot Games
   const defaultTabImg = gameTabs && gameTabs.length > 0 ? gameTabs[0].img : "";
 
+  // console.log('Types', gameTabs );
+
   return (
     <div className="px-1 lg:block">
       {/* Modern Tab Navigation */}
@@ -157,7 +159,7 @@ const GameTabsLg = () => {
         {/* Dynamic Game Type Tabs */}
         {gameTabs &&
           gameTabs
-            .filter((item) => ![6, 12, 13, 14].includes(item.id))
+            .filter((item) => ![3,5,6, 12, 13, 14].includes(item.id))
             .map((item) => (
               <button
                 key={item.id}
@@ -205,7 +207,7 @@ const GameTabsLg = () => {
         {type == "all" && !provider && (
           <div className="space-y-8">
             {gameTabs &&
-              gameTabs.map((tab, index) => (
+              gameTabs.filter((item) => ![3,5,6, 12, 13, 14].includes(item.id)).map((tab, index) => (
                 <div className="w-full" key={index}>
                   <h4 className="mb-4 text-xl font-bold text-yellow-400 px-1">
                     {tab.name}
